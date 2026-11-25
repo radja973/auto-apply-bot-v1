@@ -300,7 +300,7 @@ def apply_on_job_page(driver, config, title):
                     t = b.text.strip().lower()
                     if t in ["submit application", "submit", "kirim lamaran", "kirim permohonan"]:
                         b.click()
-                        print(f"   🎉 [BERHASIL TERKIRIM] {title}!")
+                        print(f"   [BERHASIL TERKIRIM] {title}!")
                         random_sleep(3, 4)
                         discard_modal(driver)
                         return True, "SUCCESS"
@@ -417,7 +417,7 @@ def run_bot():
 
             if success:
                 applied_count += 1
-                print(f"   📊 [TOTAL BERHASIL]: {applied_count}/{max_jobs}")
+                print(f"   [TOTAL BERHASIL]: {applied_count}/{max_jobs}")
                 delay_min = config.get("delay_between_applications_min_sec", 4)
                 delay_max = config.get("delay_between_applications_max_sec", 8)
                 random_sleep(delay_min, delay_max)

@@ -79,7 +79,7 @@ def scrape_glints():
             for j in jobs:
                 writer.writerow([j["timestamp"], j["title"], j["company"], j["url"]])
 
-        print(f"🎉 [BERHASIL] {len(jobs)} lowongan tersimpan di: {CSV_LOG_FILE}\n")
+        print(f"[BERHASIL] {len(jobs)} lowongan tersimpan di: {CSV_LOG_FILE}\n")
         print("Daftar 10 Lowongan Teratas:")
         for idx, j in enumerate(jobs[:10], 1):
             print(f"  {idx}. {j['title']} @ {j['company']}")

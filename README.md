@@ -4,17 +4,17 @@ Bot otomasi berbasis **Python + Selenium** untuk mencari lowongan kerja dan meng
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 - **Multi-Portal:** Mendukung **LinkedIn Easy Apply** dan **Glints Indonesia**.
 - **Auto-Login Google (Glints):** Mendukung login otomatis melalui Google Sign-In serta penyimpanan sesi permanen di folder lokal `chrome_profile/`.
 - **Smart Multi-Step Form Filler:** Otomatis mengunggah Resume PDF, mengisi gaji saat ini, ekspektasi gaji, lama pengalaman, dan pertanyaan standar.
 - **Interactive CMD Fallback:** Jika ada pertanyaan khusus/unik pada form lamaran (teks, pilihan ganda, atau dropdown), bot akan menampilkannya di terminal/CMD agar Anda bisa menjawab langsung dari terminal tanpa perlu menyentuh browser.
-- **Setup Wizard Tanpa Edit Kode (`setup_config.py`):** Pengguna baru cukup menjalankan menu `[0]` untuk mengisi/mengubah data pribadi, gaji, kata kunci, dan path CV PDF.
+- **Setup Wizard Tanpa Edit Kode (`bot/setup_config.py`):** Pengguna baru cukup menjalankan menu `[0]` untuk mengisi/mengubah data pribadi, gaji, kata kunci, dan path CV PDF.
 - **Anti Duplikat & Log CSV:** Semua riwayat lamaran tercatat otomatis di file `.csv` sehingga bot tidak akan melamar ke lowongan yang sama dua kali.
 
 ---
 
-## 📁 Struktur Folder
+## Struktur Folder
 
 Folder utama dibuat sangat rapi agar pengguna baru cukup berfokus pada launcher dan panduan:
 
@@ -28,7 +28,7 @@ Folder utama dibuat sangat rapi agar pengguna baru cukup berfokus pada launcher 
 
 ---
 
-## 🚀 Panduan Instalasi & Penggunaan (Untuk Pengguna Baru)
+## Panduan Instalasi & Penggunaan (Untuk Pengguna Baru)
 
 ### 1. Prasyarat
 - **Google Chrome** sudah terpasang.
@@ -37,7 +37,7 @@ Folder utama dibuat sangat rapi agar pengguna baru cukup berfokus pada launcher 
 ### 2. Download & Install Library
 1. Download repository ini (atau klik **Code -> Download ZIP**, lalu ekstrak foldernya).
 2. Klik 2x file **`run_bot.bat`**.
-3. Jika baru pertama kali menjalankan, pilih menu **`[5]`** (*Install Library Python*) untuk menginstall `selenium` dan `psutil` (atau jalankan `pip install -r requirements.txt` di terminal).
+3. Jika baru pertama kali menjalankan, pilih menu **`[5]`** (*Install Library Python*) untuk menginstall `selenium` dan `psutil` (atau jalankan `pip install -r bot/requirements.txt` di terminal).
 
 ### 3. Mengisi Data Pribadi (Pilih Salah Satu Cara)
 
@@ -47,8 +47,8 @@ Folder utama dibuat sangat rapi agar pengguna baru cukup berfokus pada launcher 
    > **Tips:** Untuk path Resume PDF, Anda bisa langsung **drag & drop** file PDF dari File Explorer ke jendela terminal, lalu tekan `ENTER`.
 3. Jika nanti ingin mengubah gaji atau mengganti file CV, cukup jalankan ulang menu **`[0]`** dan tekan `ENTER` pada data yang tidak ingin diubah.
 
-#### Cara B: Edit Manual `config.json`
-Salin file `config.example.json` menjadi `config.json`, lalu buka dengan Notepad/VS Code dan sesuaikan isinya:
+#### Cara B: Edit Manual `bot/config.json`
+Salin file `bot/config.example.json` menjadi `bot/config.json`, lalu buka dengan Notepad/VS Code dan sesuaikan isinya:
 
 ```json
 {
@@ -80,7 +80,7 @@ Salin file `config.example.json` menjadi `config.json`, lalu buka dengan Notepad
 
 ---
 
-## ▶️ Menjalankan Bot
+## Menjalankan Bot
 1. Klik 2x **`run_bot.bat`**.
 2. Pilih **`[1]`** untuk LinkedIn, **`[2]`** untuk Glints, atau **`[3]`** untuk keduanya.
 3. **Login Pertama Kali:**
@@ -92,6 +92,6 @@ Salin file `config.example.json` menjadi `config.json`, lalu buka dengan Notepad
 
 ---
 
-## 🔒 Privasi & Keamanan
+## Privasi & Keamanan
 - Jangan pernah membagikan folder `chrome_profile/` atau file `config.json` Anda ke publik (sudah otomatis diabaikan oleh `.gitignore`).
 - Gunakan jeda (`delay_between_applications`) dan batas `max_jobs_to_apply` yang wajar agar aktivitas akun tetap terlihat natural.
