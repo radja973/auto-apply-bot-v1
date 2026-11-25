@@ -1,0 +1,17 @@
+# Personal session & sensitive config
+chrome_profile/
+**/chrome_profile/
+config.json
+**/config.json
+
+# Logs & scraped job data
+*.csv
+
+# Debug screenshots
+*.png
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+.env
